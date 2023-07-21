@@ -1,0 +1,30 @@
+$colorazul: rgb(153, 153, 239);
+$colorverde: rgb(153, 239, 172);
+$colorrojo: rgb(217, 114, 114);
+$tamaño:30px;
+$mini:10px;
+$mini2:$mini*2;
+
+.estilo1 {
+    background-color:$colorazul;
+}
+
+.estilo2 {
+    background-color:$colorverde;
+}
+//anidamiento de selectores algo que no esta soportado en css
+.estilo1 { 
+    .subestilo1 {
+
+        background-color: $colorrojo;
+        font-size:$tamaño+20;
+    }
+}
+.estilo3 {
+
+    font-size: $mini;
+}
+.estilo3 {
+
+    font-size: $mini2;
+}

@@ -1,0 +1,12 @@
+@import "../cssmixin/mixinbasicos.scss";
+
+
+
+p {
+
+    border:1px solid black;
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+    @include bordeRedondo(10px);
+}

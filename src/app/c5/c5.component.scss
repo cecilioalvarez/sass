@@ -1,0 +1,66 @@
+// definir basicamente el concepto de funcion
+@mixin estilo1 {
+
+    border: 1px solid black;
+    width: 200px;
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(164, 164, 227);
+    border-radius: 10px;
+
+}
+
+
+@mixin estiloParametros($padding, $border) {
+
+
+    border: $border solid black;
+    width: 200px;
+    text-align: center;
+    padding: $padding;
+    background-color: rgb(164, 164, 227);
+    border-radius: 10px;
+}
+
+
+@mixin estiloParametros2($padding :10px, $border:2px) {
+
+
+    border: $border solid black;
+    width: 200px;
+    text-align: center;
+    padding: $padding;
+    background-color: rgb(164, 164, 227);
+    border-radius: 10px;
+}
+
+@mixin mayusculasarialgrande {
+
+  text-transform: uppercase;
+  font-size: 30px;
+  font-family: arial;
+
+}
+
+.miestilo {
+
+    @include estilo1;
+    @include mayusculasarialgrande;
+}
+
+
+.miestilo2 {
+
+    @include estiloParametros(40px, 5px);
+    @include mayusculasarialgrande;
+}
+
+.miestilo3 {
+
+    @include estiloParametros2();
+    @include mayusculasarialgrande;
+}
+
+
+
+
